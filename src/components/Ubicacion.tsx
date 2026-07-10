@@ -1,4 +1,8 @@
+"use client";
+
 import Image from "next/image";
+import { Map, MapControls, MapMarker, MarkerContent } from "@/components/ui/map";
+import { Card } from "@/components/ui/card";
 
 export default function Ubicacion() {
   return (
@@ -14,54 +18,51 @@ export default function Ubicacion() {
           <div className="flex-grow h-px bg-forest/20" />
         </div>
 
-        {/* Topography Style Map Container - LARGER */}
-        <div className="relative w-full max-w-6xl mx-auto h-[550px] md:h-[650px] rounded-sm overflow-hidden shadow-2xl border border-gold/25 bg-[#faf5f0]">
-          {/* Map background (using footer.jpg directly, which is the cream/brown map) */}
-          <div className="absolute inset-0 z-0">
-            <Image
-              src="/images/footer.jpg"
-              alt="Mapa de ubicación Lomas Altas"
-              fill
-              className="object-cover w-full h-full select-none"
-              priority
-            />
-          </div>
-
-          {/* Map Grid overlay for tech look */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_50%,#faf5f0_95%)] opacity-40 z-0" />
-
-          {/* Central Roundabout Pin with Leaf Logo */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 flex flex-col items-center">
-            {/* Pulsing ring */}
-            <div className="absolute w-14 h-14 rounded-full bg-forest/10 animate-ping border border-forest/30" />
-            
-            {/* Green Leaf Logo in Roundabout */}
-            <div className="relative w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg border border-gold/20 hover:scale-110 transition-transform duration-300 cursor-pointer">
-              <Image
-                src="/images/logo1.svg"
-                alt="Lomas Altas Ubicación"
-                width={30}
-                height={30}
-                className="w-[70%] h-auto filter brightness-75 hue-rotate-60"
-              />
-            </div>
-          </div>
+        {/* Topography Style Map Container - LARGER & INTERACTIVE */}
+        <Card className="relative w-full max-w-6xl mx-auto h-[550px] md:h-[650px] rounded-sm overflow-hidden shadow-2xl border border-gold/25 p-0 bg-[#faf5f0]">
+          <Map 
+            center={[-99.267787, 19.517566]} // Coordinates for Avenida Lomas Verdes, Naucalpan (Exact client position)
+            zoom={15} 
+            theme="light"
+            className="w-full h-full"
+          >
+            <MapControls />
+            <MapMarker longitude={-99.267787} latitude={19.517566}>
+              <MarkerContent>
+                <div className="relative z-10 flex flex-col items-center">
+                  {/* Pulsing ring */}
+                  <div className="absolute w-14 h-14 rounded-full bg-forest/10 animate-ping border border-forest/30" />
+                  
+                  {/* Green Leaf Logo Pin */}
+                  <div className="relative w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg border border-gold/20 hover:scale-110 transition-transform duration-300 cursor-pointer">
+                    <Image
+                      src="/images/isotip3.svg"
+                      alt="Lomas Altas Ubicación"
+                      width={30}
+                      height={30}
+                      className="w-[70%] h-auto filter brightness-75 hue-rotate-60"
+                    />
+                  </div>
+                </div>
+              </MarkerContent>
+            </MapMarker>
+          </Map>
 
           {/* Direction Overlay Card - Matches mockup layout */}
-          <div className="absolute bottom-10 left-6 right-6 md:left-1/2 md:-translate-x-1/2 md:w-[680px] z-15">
+          <div className="absolute bottom-10 left-6 right-6 md:left-1/2 md:-translate-x-1/2 md:w-[680px] z-30">
             <div className="bg-[#153124]/95 backdrop-blur-md border border-gold/20 px-8 py-5 rounded-sm shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
               <div className="flex items-center gap-4">
                 <span className="text-gold text-xs tracking-[0.2em] uppercase font-semibold border-r border-white/20 pr-4 shrink-0">
                   Dirección:
                 </span>
                 <p className="text-white text-xs md:text-[13px] font-light leading-relaxed">
-                  Avenida Lomas Verdes, P.º de Lomas Verdes,
+                  Avenida Lomas Verdes & P.º de Lomas Verdes,
                   <br />
                   53125 Naucalpan de Juárez, Méx.
                 </p>
               </div>
               <a
-                href="https://maps.google.com"
+                href="https://maps.google.com/?q=19.517566,-99.267787"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gold hover:text-white text-[10px] tracking-[0.25em] uppercase font-semibold border-b border-gold hover:border-white pb-0.5 transition-colors whitespace-nowrap"
@@ -70,8 +71,7 @@ export default function Ubicacion() {
               </a>
             </div>
           </div>
-        </div>
-
+        </Card>
       </div>
 
       {/* Puntos Cercanos - Dark Green Lobby background with white logos */}

@@ -64,7 +64,7 @@ export default function Footer() {
                   />
                 </svg>
                 <span>
-                  Avenida Lomas Verdes, P.º de Lomas Verdes, 53125 Naucalpan de Juárez,
+                  Avenida Lomas Verdes & P.º de Lomas Verdes, 53125 Naucalpan de Juárez,
                   Estado de México.
                 </span>
               </div>
