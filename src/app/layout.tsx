@@ -17,7 +17,14 @@ const montserrat = Montserrat({
   weight: ["300", "400", "500", "600", "700"],
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
+  ? process.env.NEXT_PUBLIC_SITE_URL
+  : process.env.VERCEL_PROJECT_PRODUCTION_URL
+  ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+  : "http://localhost:3000";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Lomas Altas — El hogar donde todo crece",
   description:
     "Departamentos amplios, amenidades funcionales y una ubicación estratégica en Lomas Verdes. Torre residencial dentro de Terralago.",
@@ -29,11 +36,31 @@ export const metadata: Metadata = {
     "penthouses",
     "torre residencial",
   ],
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
+  },
   openGraph: {
     title: "Lomas Altas — El hogar donde todo crece",
     description:
       "Torre residencial dentro de Terralago. Departamentos amplios con amenidades funcionales en Lomas Verdes.",
     type: "website",
+    images: [
+      {
+        url: "/opengraph-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Lomas Altas — Torre residencial dentro de Terralago",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Lomas Altas — El hogar donde todo crece",
+    description:
+      "Torre residencial dentro de Terralago. Departamentos amplios con amenidades funcionales en Lomas Verdes.",
+    images: ["/twitter-image.jpg"],
   },
 };
 
