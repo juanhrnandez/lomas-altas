@@ -79,7 +79,7 @@ export default function Ubicacion() {
         {/* Background Lobby Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/sec_log.jpg"
+            src="/images/eyecatcher.jpg"
             alt=""
             fill
             className="object-cover"

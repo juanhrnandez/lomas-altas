@@ -26,29 +26,8 @@ export default function Amenidades() {
           
           {/* Row 1 (55% / 45%) */}
           <div className="flex flex-col md:flex-row gap-8">
-            {/* Card 1: Lobby de acceso (55%) */}
+            {/* Card 1: Gimnasio (55%) */}
             <div className="w-full md:w-[55%] h-[280px] md:h-[350px] relative rounded-sm overflow-hidden shadow-lg border border-white/20 group">
-              {/* Corner Ribbon / Triangle */}
-              <div 
-                className="absolute top-0 left-0 bg-[#153124] w-[300px] h-[55px] z-10 flex items-start pl-4 pt-2.5 transition-transform duration-500 ease-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                style={{ clipPath: 'polygon(0 0, 100% 0, 0 100%)' }}
-              >
-                <span className="text-white text-xs md:text-sm font-serif tracking-wide">
-                  Lobby de acceso
-                </span>
-              </div>
-              <Image
-                src="/images/sec_log.jpg"
-                alt="Lobby de acceso"
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-                priority
-              />
-              <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300" />
-            </div>
-
-            {/* Card 2: Gimnasio (45%) */}
-            <div className="w-full md:w-[45%] h-[280px] md:h-[350px] relative rounded-sm overflow-hidden shadow-lg border border-white/20 group">
               {/* Corner Ribbon / Triangle */}
               <div 
                 className="absolute top-0 left-0 bg-[#153124] w-[300px] h-[55px] z-10 flex items-start pl-4 pt-2.5 transition-transform duration-500 ease-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
@@ -59,11 +38,32 @@ export default function Amenidades() {
                 </span>
               </div>
               <Image
-                src="/images/sec_log.jpg"
-                alt="Gimnasio"
+                src="/images/lomas1.jpeg"
+                alt="Gimnasio equipada"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
-                style={{ objectPosition: 'center bottom' }}
+                priority
+              />
+              <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300" />
+            </div>
+
+            {/* Card 2: Comedor & Estancia (45%) */}
+            <div className="w-full md:w-[45%] h-[280px] md:h-[350px] relative rounded-sm overflow-hidden shadow-lg border border-white/20 group">
+              {/* Corner Ribbon / Triangle */}
+              <div 
+                className="absolute top-0 left-0 bg-[#153124] w-[300px] h-[55px] z-10 flex items-start pl-4 pt-2.5 transition-transform duration-500 ease-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                style={{ clipPath: 'polygon(0 0, 100% 0, 0 100%)' }}
+              >
+                <span className="text-white text-xs md:text-sm font-serif tracking-wide">
+                  Comedor & Estancia
+                </span>
+              </div>
+              <Image
+                src="/images/lomas2.jpeg"
+                alt="Comedor y Estancia"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                style={{ objectPosition: 'center center' }}
                 priority
               />
               <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300" />
@@ -72,7 +72,7 @@ export default function Amenidades() {
 
           {/* Row 2 (35% / 65%) */}
           <div className="flex flex-col md:flex-row gap-8">
-            {/* Card 3: Estacionamiento (35%) */}
+            {/* Card 3: Cocina (35%) */}
             <div className="w-full md:w-[35%] h-[280px] md:h-[350px] relative rounded-sm overflow-hidden shadow-lg border border-white/20 group">
               {/* Corner Ribbon / Triangle */}
               <div 
@@ -80,21 +80,21 @@ export default function Amenidades() {
                 style={{ clipPath: 'polygon(0 0, 100% 0, 0 100%)' }}
               >
                 <span className="text-white text-xs md:text-sm font-serif tracking-wide">
-                  Estacionamiento
+                  Cocina
                 </span>
               </div>
               <Image
-                src="/images/eyecatcher.jpg" // Use clean eyecatcher.jpg to avoid the white V-notch in slider2.png
-                alt="Estacionamiento"
+                src="/images/lomas3.jpeg"
+                alt="Cocina Integral"
                 fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105 animate-fade-in"
-                style={{ objectPosition: 'center bottom' }}
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                style={{ objectPosition: 'center center' }}
                 priority
               />
               <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300" />
             </div>
 
-            {/* Card 4: Jardín (65%) */}
+            {/* Card 4: Sala & Terraza (65%) */}
             <div className="w-full md:w-[65%] h-[280px] md:h-[350px] relative rounded-sm overflow-hidden shadow-lg border border-white/20 group">
               {/* Corner Ribbon / Triangle */}
               <div 
@@ -102,15 +102,15 @@ export default function Amenidades() {
                 style={{ clipPath: 'polygon(0 0, 100% 0, 0 100%)' }}
               >
                 <span className="text-white text-xs md:text-sm font-serif tracking-wide">
-                  Jardín
+                  Sala & Terraza
                 </span>
               </div>
               <Image
-                src="/images/sec_log.jpg"
-                alt="Jardín"
+                src="/images/lomas4.jpeg"
+                alt="Sala y Terraza"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
-                style={{ objectPosition: 'center bottom' }}
+                style={{ objectPosition: 'center center' }}
                 priority
               />
               <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300" />
@@ -119,7 +119,7 @@ export default function Amenidades() {
 
           {/* Row 3 (60% / 40%) */}
           <div className="flex flex-col md:flex-row gap-8">
-            {/* Card 5: Terraza (60%) */}
+            {/* Card 5: Baño Principal (60%) */}
             <div className="w-full md:w-[60%] h-[280px] md:h-[350px] relative rounded-sm overflow-hidden shadow-lg border border-white/20 group">
               {/* Corner Ribbon / Triangle */}
               <div 
@@ -127,21 +127,21 @@ export default function Amenidades() {
                 style={{ clipPath: 'polygon(0 0, 100% 0, 0 100%)' }}
               >
                 <span className="text-white text-xs md:text-sm font-serif tracking-wide">
-                  Terraza
+                  Baño Principal
                 </span>
               </div>
               <Image
-                src="/images/eyecatcher.jpg"
-                alt="Terraza"
+                src="/images/lomas5.jpeg"
+                alt="Baño Principal"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
-                style={{ objectPosition: 'center top' }}
+                style={{ objectPosition: 'center center' }}
                 priority
               />
               <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300" />
             </div>
 
-            {/* Card 6: Salón de eventos (40%) */}
+            {/* Card 6: Vista Exterior (40%) */}
             <div className="w-full md:w-[40%] h-[280px] md:h-[350px] relative rounded-sm overflow-hidden shadow-lg border border-white/20 group">
               {/* Corner Ribbon / Triangle */}
               <div 
@@ -149,12 +149,12 @@ export default function Amenidades() {
                 style={{ clipPath: 'polygon(0 0, 100% 0, 0 100%)' }}
               >
                 <span className="text-white text-xs md:text-sm font-serif tracking-wide">
-                  Salón de eventos
+                  Vista Exterior
                 </span>
               </div>
               <Image
-                src="/images/sec_log.jpg"
-                alt="Salón de eventos"
+                src="/images/eyecatcher.jpg"
+                alt="Vista Exterior"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 style={{ objectPosition: 'center center' }}
