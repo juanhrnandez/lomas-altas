@@ -33,19 +33,19 @@ export default function Amenidades() {
     [
       {
         title: "Gimnasio Equipado",
-        img: "/images/Amenidades/Terralago Gym.jpg",
+        img: "/images/amenidades/terralago-gym.jpg",
         widthClass: "w-full",
       }
     ],
     [
       {
         title: "Lobby Jardín",
-        img: "/images/Amenidades/TT_Lobby_06@2x.jpg",
+        img: "/images/amenidades/tt-lobby-06-2x.jpg",
         widthClass: "w-full md:w-[48%]",
       },
       {
         title: "Comedor Social & Eventos",
-        img: "/images/Amenidades/Terralago Salón.jpg",
+        img: "/images/amenidades/terralago-salon.jpg",
         widthClass: "w-full md:w-[52%]",
       },
     ],

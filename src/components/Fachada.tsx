@@ -16,7 +16,7 @@ export default function Fachada() {
       {/* Full Width Image - No borders, no margins, no padding */}
       <div className="w-full overflow-hidden">
         <Image
-          src="/images/Generales/Terralago Fachada frontal.jpg"
+          src="/images/generales/terralago-fachada-frontal.jpg"
           alt="Fachada principal del edificio Lomas Altas"
           width={4719}
           height={3675}

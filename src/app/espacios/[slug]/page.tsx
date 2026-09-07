@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
-  const primerRender = tipologia.renders[0]?.src || tipologia.plantas[0]?.src || "/images/Amenidades/Terralago Vista aérea.jpg";
+  const primerRender = tipologia.renders[0]?.src || tipologia.plantas[0]?.src || "/images/amenidades/terralago-vista-aerea.jpg";
 
   return {
     title: `${tipologia.nombre} (${tipologia.codigo}) — Lomas Altas`,
