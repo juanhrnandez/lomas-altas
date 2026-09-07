@@ -14,10 +14,15 @@ const navLinks = [
   { label: "Contacto", href: "/contacto" },
 ];
 
+/** `/espacios/` and `/espacios` are the same page: the static export adds the slash. */
+function sinBarraFinal(ruta: string): string {
+  return ruta.replace(/\/+$/, "") || "/";
+}
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const pathname = usePathname();
+  const pathname = sinBarraFinal(usePathname() ?? "/");
 
   const isSolid = scrolled || pathname !== "/";
 
@@ -53,7 +58,7 @@ export default function Navbar() {
         <Link href="/" className="mb-3 transition-transform duration-300 hover:scale-105">
           <Image
             src="/images/loma-logo-clean.png"
-            alt="Lomas Altas - El hogar donde todo crece"
+            alt="Lomas Altas — Departamentos en Lomas Verdes, Naucalpan. El hogar donde todo crece"
             width={260}
             height={70}
             className={`transition-all duration-500 object-contain filter drop-shadow-md ${
@@ -66,7 +71,7 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center w-full max-w-4xl px-4 gap-6">
           <div className="flex-1 h-px bg-gold/40" />
-          <nav className="flex items-center gap-6 whitespace-nowrap">
+          <nav aria-label="Navegación principal" className="flex items-center gap-6 whitespace-nowrap">
             {navLinks.map((link, index) => {
               const isActive = pathname === link.href;
               return (
@@ -93,7 +98,8 @@ export default function Navbar() {
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className="md:hidden absolute right-6 top-6 text-white p-2"
-          aria-label="Abrir menú"
+          aria-label={mobileOpen ? "Cerrar menú" : "Abrir menú"}
+          aria-expanded={mobileOpen}
         >
           <svg
             className="w-6 h-6"
@@ -126,7 +132,7 @@ export default function Navbar() {
           mobileOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <nav className="bg-[#0b3e25]/95 backdrop-blur-md px-6 pb-6 pt-2 flex flex-col items-center gap-4">
+        <nav aria-label="Navegación móvil" className="bg-[#0b3e25]/95 backdrop-blur-md px-6 pb-6 pt-2 flex flex-col items-center gap-4">
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
             return (

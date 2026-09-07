@@ -33,7 +33,7 @@ export default function ElDesarrollo() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/slider2.png"
-            alt="Lomas Altas"
+            alt="Entorno arbolado de Lomas Altas sobre Avenida Lomas Verdes, Naucalpan"
             fill
             className="object-cover object-top"
             priority
@@ -45,14 +45,18 @@ export default function ElDesarrollo() {
         {/* Text Content Overlay - Exact Match to Image 1 */}
         <div className="relative z-10 flex flex-col items-center justify-center pt-32 pb-24 px-6 text-center">
           <ScrollReveal variant="fade-up" delay={100}>
-            <h2 className="font-sans font-light text-2xl sm:text-4xl lg:text-[2.75rem] text-white tracking-wide leading-tight mb-1">
-              Vive en una torre residencial
-            </h2>
-            <span className="font-serif italic font-normal text-2xl sm:text-4xl lg:text-[2.75rem] text-gold-light tracking-wide mb-6 block">
-              dentro de Terralago
-            </span>
+            {/* The page's single H1: the hero above is an image, so the first
+                heading in the flow carries the brand, the product and the place. */}
+            <h1 className="mb-6">
+              <span className="block font-sans font-light text-2xl sm:text-4xl lg:text-[2.75rem] text-white tracking-wide leading-tight mb-1">
+                Lomas Altas: vive en una torre residencial
+              </span>
+              <span className="block font-serif italic font-normal text-2xl sm:text-4xl lg:text-[2.75rem] text-gold-light tracking-wide">
+                dentro de Terralago, en Lomas Verdes
+              </span>
+            </h1>
             <p className="font-sans font-light tracking-wider text-xs sm:text-sm md:text-base text-white/85 max-w-3xl leading-relaxed mx-auto">
-              Departamentos amplios, amenidades funcionales y una ubicación estratégica en Lomas Verdes, diseñados para quienes buscan comodidad, privacidad y una conexión natural con su entorno.
+              Departamentos amplios, amenidades funcionales y una ubicación estratégica en Lomas Verdes, Naucalpan, a minutos de Satélite y Atizapán de Zaragoza. Diseñados para quienes buscan comodidad, privacidad y una conexión natural con su entorno.
             </p>
           </ScrollReveal>
         </div>
@@ -65,7 +69,7 @@ export default function ElDesarrollo() {
           <div className="w-24 h-24 md:w-28 md:h-28 rounded-full bg-cream flex items-center justify-center shadow-xl border-4 border-white overflow-hidden hover:scale-105 transition-transform duration-300">
             <Image
               src="/images/edifincon.svg"
-              alt="Icono edificio Lomas Altas"
+              alt="Isotipo de la torre Lomas Altas"
               width={120}
               height={120}
               className="w-full h-full object-contain scale-[1.6]"
@@ -153,7 +157,7 @@ export default function ElDesarrollo() {
             <div className="relative z-10 w-full h-full min-h-[380px] sm:min-h-[460px] lg:min-h-[550px] overflow-hidden">
               <Image
                 src="/images/Generales/Terralago Fachada lateral.jpg"
-                alt="Edificio Lomas Altas - Terralago Fachada lateral"
+                alt="Fachada lateral de la torre Lomas Altas en Terralago, con jardineras corridas en cada nivel, Lomas Verdes, Naucalpan"
                 fill
                 className="object-cover object-center w-full h-full"
                 priority
@@ -170,15 +174,17 @@ export default function ElDesarrollo() {
             <div className="absolute inset-y-0 left-0 -right-[50vw] bg-[#decd99] -z-10" />
 
             <ScrollReveal variant="fade-up" delay={150}>
-              <h3 className="font-sans font-light text-2xl sm:text-4xl lg:text-[2.6rem] leading-tight mb-1 text-[#4a3e26]">
-                Vive en una torre residencial
-              </h3>
-              <span className="font-serif font-normal text-2xl sm:text-4xl lg:text-[2.6rem] text-[#4a3e26] mb-8 block">
-                dentro de Terralago
-              </span>
+              <h2 className="mb-8">
+                <span className="block font-sans font-light text-2xl sm:text-4xl lg:text-[2.6rem] leading-tight mb-1 text-[#4a3e26]">
+                  Departamentos en Lomas Verdes,
+                </span>
+                <span className="block font-serif font-normal text-2xl sm:text-4xl lg:text-[2.6rem] text-[#4a3e26]">
+                  Naucalpan, Estado de México
+                </span>
+              </h2>
 
               <p className="font-sans font-light text-sm sm:text-base leading-relaxed text-[#4a3e26]/90 max-w-lg mb-10">
-                Departamentos amplios, amenidades funcionales y una ubicación estratégica en Lomas Verdes, diseñados para quienes buscan comodidad, privacidad y una conexión natural con su entorno.
+                Lomas Altas es una torre de baja densidad dentro del conjunto Terralago: 18 unidades en 5 niveles, con residencias Planta Jardín, departamentos de tres recámaras y dos penthouses dúplex. Desde aquí, Ciudad Satélite, Lomas de Satélite, Atizapán de Zaragoza, la Presa Madín, Lago Esmeralda y Zona Esmeralda quedan a minutos.
               </p>
 
               <div className="flex flex-wrap items-center gap-4 sm:gap-6">
@@ -192,7 +198,7 @@ export default function ElDesarrollo() {
                   href="/espacios"
                   className="bg-white hover:bg-[#4a3e26] hover:text-white text-[#4a3e26] font-sans text-xs sm:text-sm tracking-wide px-7 py-3.5 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] cursor-pointer"
                 >
-                  Ver departamentos
+                  Ver departamentos y penthouses
                 </Link>
               </div>
             </ScrollReveal>

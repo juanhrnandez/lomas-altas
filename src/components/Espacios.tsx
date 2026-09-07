@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, X } from "lucide-react";
+import { ArrowRight, X } from "lucide-react";
 
 interface FeatureItem {
   name: string;
@@ -167,7 +167,7 @@ export default function Espacios() {
               Prototipos y Distribución
             </span>
             <h2 className="font-serif font-light text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] text-[#5c4a2c] leading-tight mt-1">
-              Departamentos y Penthouses
+              Departamentos y Penthouses en Lomas Verdes
             </h2>
           </div>
 
@@ -309,7 +309,7 @@ export default function Espacios() {
                 <Image
                   key={selectedModel}
                   src={current.img}
-                  alt={`Planta de distribución - ${selectedModel}`}
+                  alt={`Planta de distribución de ${selectedModel} en Lomas Altas, Lomas Verdes, Naucalpan`}
                   fill
                   className="object-contain object-center transition-opacity duration-300"
                   priority

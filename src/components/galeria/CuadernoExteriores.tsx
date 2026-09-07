@@ -26,7 +26,7 @@ export default function CuadernoExteriores() {
           tone="dark"
           titulo="Exteriores"
           acento="el volumen y su contexto"
-          parrafo="El edificio se lee desde tres distancias: el conjunto desde el aire, el volumen en la esquina y el alzado completo. Las jardineras corridas no son adorno de fachada: resuelven el antepecho, dan sombra a cada nivel y hacen que el edificio cambie con las estaciones."
+          parrafo="El edificio se lee desde tres distancias: el conjunto Terralago desde el aire, el volumen en la esquina de Avenida Lomas Verdes y el alzado completo. Las jardineras corridas no son adorno de fachada: resuelven el antepecho, dan sombra a cada nivel y hacen que el edificio cambie con las estaciones."
           meta={[`${total} láminas`, "Render de proyecto"]}
         />
       </SafeReveal>

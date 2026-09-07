@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { TIPOLOGIAS, obtenerTipologiaPorSlug } from "@/components/espacios/espaciosData";
 import TipologiaDetalle from "@/components/espacios/TipologiaDetalle";
+import JsonLd from "@/components/JsonLd";
+import { OG_BASE, apartmentFor, breadcrumbList } from "@/lib/seo";
 
 interface PageProps {
   params: Promise<{
@@ -21,34 +23,47 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!tipologia) {
     return {
-      title: "Tipología no encontrada — Lomas Altas",
+      title: "Tipología no encontrada",
+      robots: { index: false, follow: false },
     };
   }
 
-  const primerRender = tipologia.renders[0]?.src || tipologia.plantas[0]?.src || "/images/Amenidades/Terralago Vista aérea.jpg";
+  const primerRender =
+    tipologia.renders[0]?.src ||
+    tipologia.plantas[0]?.src ||
+    "/images/Amenidades/Terralago Vista aérea.jpg";
+
+  const titulo = `${tipologia.nombre} · ${tipologia.superficie} · Lomas Verdes`;
 
   return {
-    title: `${tipologia.nombre} (${tipologia.codigo}) — Lomas Altas`,
-    description: `${tipologia.nombre} en Lomas Altas, Naucalpan. ${tipologia.superficie} de superficie total, ${tipologia.superficieInterior} interior, ${tipologia.exterior}. ${tipologia.unidades} unidades en torre.`,
+    title: titulo,
+    description: `${tipologia.nombre} en Lomas Altas, Lomas Verdes, Naucalpan: ${tipologia.superficie} totales, ${tipologia.superficieInterior} interiores, ${tipologia.recamaras}. ${tipologia.unidades} unidades en la torre de Terralago.`,
+    keywords: [
+      `${tipologia.nombre} Lomas Altas`,
+      `departamento ${tipologia.superficie} Lomas Verdes`,
+      "departamentos en Lomas Verdes",
+      "departamentos en venta Naucalpan",
+      "Terralago",
+    ],
     alternates: { canonical: `/espacios/${tipologia.slug}` },
     openGraph: {
-      title: `${tipologia.nombre} — Lomas Altas`,
-      description: `${tipologia.tagline}. ${tipologia.superficie} de superficie total.`,
+      ...OG_BASE,
+      title: `${tipologia.nombre} — Lomas Altas, Lomas Verdes`,
+      description: `${tipologia.tagline}. ${tipologia.superficie} de superficie total en Terralago, Naucalpan.`,
       url: `/espacios/${tipologia.slug}`,
-      type: "website",
       images: [
         {
           url: primerRender,
           width: 1200,
           height: 800,
-          alt: tipologia.nombre,
+          alt: `${tipologia.nombre} en Lomas Altas, Lomas Verdes, Naucalpan`,
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: `${tipologia.nombre} — Lomas Altas`,
-      description: `${tipologia.tagline}. ${tipologia.superficie} totales.`,
+      title: `${tipologia.nombre} — Lomas Altas, Lomas Verdes`,
+      description: `${tipologia.tagline}. ${tipologia.superficie} totales en Naucalpan.`,
       images: [primerRender],
     },
   };
@@ -62,5 +77,21 @@ export default async function TipologiaPage({ params }: PageProps) {
     notFound();
   }
 
-  return <TipologiaDetalle tipologia={tipologia} />;
+  const apartment = apartmentFor(tipologia.slug);
+
+  return (
+    <>
+      <JsonLd
+        data={[
+          ...(apartment ? [apartment] : []),
+          breadcrumbList([
+            { nombre: "Inicio", path: "/" },
+            { nombre: "Espacios", path: "/espacios" },
+            { nombre: tipologia.nombre, path: `/espacios/${tipologia.slug}` },
+          ]),
+        ]}
+      />
+      <TipologiaDetalle tipologia={tipologia} />
+    </>
+  );
 }

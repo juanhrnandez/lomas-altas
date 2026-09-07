@@ -84,6 +84,9 @@ export default function Amenidades() {
             </h2>
             <div className="flex-grow h-px bg-[#5c4a2c]/25 min-w-[8px] sm:min-w-[24px]" />
           </div>
+          <p className="-mt-8 sm:-mt-12 mb-12 sm:mb-16 text-center font-serif italic text-lg sm:text-xl text-[#4a3e26]">
+            Amenidades de Lomas Altas, en Terralago, Lomas Verdes
+          </p>
         </ScrollReveal>
 
         {/* Custom Asymmetric Masonry Grid with Lightbox Zoom on Click */}
@@ -110,7 +113,7 @@ export default function Amenidades() {
                     {/* Background Image with Smooth Hover Zoom */}
                     <Image
                       src={card.img}
-                      alt={card.title}
+                      alt={`${card.title} — amenidad de Lomas Altas en Lomas Verdes, Naucalpan`}
                       fill
                       unoptimized
                       quality={100}

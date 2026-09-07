@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import Image from "next/image";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { Map, MapMarker, MarkerContent, useMap } from "@/components/ui/map";
+import { ZONAS_CERCANAS } from "@/lib/zonas";
 
 /** Base zoom and how much it grows as the map crosses the viewport. */
 const MAP_ZOOM_BASE = 14.8;
@@ -68,13 +69,22 @@ export default function Ubicacion() {
 
         {/* Section Header with Left and Right Lines */}
         <ScrollReveal variant="fade-up" delay={100}>
-          <div className="flex items-center w-full max-w-5xl mx-auto gap-6 mb-4 relative z-10">
-            <div className="flex-grow h-px bg-forest/20" />
-            <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-forest text-center whitespace-nowrap">
-              Sección de ubicación
+          <div className="flex items-center w-full max-w-5xl mx-auto gap-3 sm:gap-6 mb-3 relative z-10">
+            <div className="flex-grow h-px bg-forest/20 min-w-[8px] sm:min-w-[24px]" />
+            <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-forest text-center text-balance sm:whitespace-nowrap">
+              Ubicación en Lomas Verdes, Naucalpan
             </h2>
-            <div className="flex-grow h-px bg-forest/20" />
+            <div className="flex-grow h-px bg-forest/20 min-w-[8px] sm:min-w-[24px]" />
           </div>
+          <p className="font-serif italic text-lg sm:text-xl text-gold-dark text-center mb-5">
+            Sobre Avenida Lomas Verdes, dentro del conjunto Terralago
+          </p>
+          <p className="relative z-10 text-center text-xs sm:text-sm md:text-base font-light text-[#5c4a2c]/85 max-w-2xl mx-auto leading-relaxed">
+            Lomas Altas se levanta en una de las zonas más consolidadas del poniente del
+            Estado de México: a minutos de Ciudad Satélite, Lomas de Satélite y Atizapán de
+            Zaragoza, con la Presa Madín, Lago Esmeralda y Zona Esmeralda al norte, y salidas
+            directas a Chamapa–Lechería y Periférico.
+          </p>
         </ScrollReveal>
 
       </div>
@@ -100,7 +110,7 @@ export default function Ubicacion() {
                   <div className="relative w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg border border-gold/20 hover:scale-110 transition-transform duration-300 cursor-pointer">
                     <Image
                       src="/images/isotip3.svg"
-                      alt="Lomas Altas Ubicación"
+                      alt="Ubicación de Lomas Altas en Avenida Lomas Verdes, Naucalpan"
                       width={30}
                       height={30}
                       className="w-[70%] h-auto filter brightness-75 hue-rotate-60"
@@ -140,7 +150,8 @@ export default function Ubicacion() {
               rel="noopener noreferrer"
               className="text-gold hover:text-white text-[10px] tracking-[0.25em] uppercase font-semibold border-b border-gold hover:border-white pb-0.5 transition-colors whitespace-nowrap"
             >
-              VER UBICACIÓN
+              VER EN GOOGLE MAPS
+              <span className="sr-only"> (se abre en una pestaña nueva)</span>
             </a>
           </div>
         </div>
@@ -152,7 +163,8 @@ export default function Ubicacion() {
         <div className="absolute inset-0 z-0 bg-[#122718]">
           <Image
             src="/images/sec_log.jpg"
-            alt="Puntos Cercanos"
+            alt=""
+            aria-hidden
             fill
             className="object-cover object-center opacity-40 md:opacity-100"
             priority
@@ -171,6 +183,10 @@ export default function Ubicacion() {
               </h3>
               <div className="flex-grow h-px bg-[#d4c491]/30" />
             </div>
+            <p className="-mt-6 sm:-mt-10 mb-10 sm:mb-14 text-center font-sans text-xs sm:text-sm font-light text-white/75 max-w-2xl mx-auto leading-relaxed">
+              Colegios, universidades, centros comerciales y vialidades de Lomas Verdes y
+              Satélite, todos en el entorno inmediato de Lomas Altas.
+            </p>
           </ScrollReveal>
 
           {/* Logos Grid - Flat White Silhouette styling */}
@@ -233,7 +249,7 @@ export default function Ubicacion() {
                 <div className="w-18 h-18 sm:w-24 sm:h-24 relative flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
                   <Image
                     src="/images/logo_uvm.png"
-                    alt="UVM Lomas"
+                    alt="UVM Campus Lomas Verdes"
                     width={90}
                     height={90}
                     className="w-full h-full object-contain opacity-45 group-hover:opacity-100 transition-all duration-300 filter brightness-[0.72] drop-shadow-[0_2px_6px_rgba(0,0,0,0.4)]"
@@ -286,7 +302,7 @@ export default function Ubicacion() {
                 <div className="w-18 h-18 sm:w-24 sm:h-24 relative flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
                   <Image
                     src="/images/logo_chamapa.png"
-                    alt="Chamapa-Lechería"
+                    alt="Autopista Chamapa-Lechería, acceso a Atizapán y Zona Esmeralda"
                     width={90}
                     height={90}
                     className="w-full h-full object-contain opacity-45 group-hover:opacity-100 transition-all duration-300 filter brightness-[0.72] drop-shadow-[0_2px_6px_rgba(0,0,0,0.4)]"
@@ -300,6 +316,32 @@ export default function Ubicacion() {
             </div>
           </div>
         </ScrollReveal>
+
+          {/* Zonas cercanas: the geographic keywords, visible and readable, not
+              buried in a meta tag. Plain text on purpose — there are no landing
+              pages for them yet, and empty links would be noise. */}
+          <ScrollReveal variant="fade-up" delay={200}>
+            <div className="mt-14 sm:mt-20 border-t border-[#d4c491]/25 pt-10 sm:pt-12">
+              <h4 className="text-center font-sans text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.28em] text-[#d4c491] mb-8">
+                Zonas cercanas a Lomas Altas
+              </h4>
+              <ul className="grid grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-6 sm:gap-y-8 max-w-4xl mx-auto">
+                {ZONAS_CERCANAS.map((zona) => (
+                  <li
+                    key={zona.nombre}
+                    className="flex flex-col items-center text-center gap-1"
+                  >
+                    <span className="font-serif text-base sm:text-lg md:text-xl text-white tracking-wide">
+                      {zona.nombre}
+                    </span>
+                    <span className="font-sans text-[11px] sm:text-xs font-light text-white/65">
+                      {zona.nota}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </ScrollReveal>
 
         </div>
       </div>

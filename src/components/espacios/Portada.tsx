@@ -42,9 +42,10 @@ export default function Portada() {
               </span>
             </h1>
             <p className="mt-7 max-w-[46ch] font-sans text-[15px] font-light leading-[1.65] text-[#5c4a2c]/85 md:text-[17px]">
-              Dieciocho unidades exclusivas en cinco niveles. Cuatro modelos con superficies desde
-              188.94 m² hasta 384.84 m² totales, terrazas techadas en fachada, jardines privados en
-              planta baja y penthouses con terrazas panorámicas.
+              Dieciocho unidades exclusivas en cinco niveles, dentro de Terralago, en Lomas Verdes,
+              Naucalpan. Cuatro modelos con superficies desde 188.94 m² hasta 384.84 m² totales,
+              terrazas techadas en fachada, jardines privados en planta baja y penthouses con
+              terrazas panorámicas.
             </p>
           </SafeReveal>
 

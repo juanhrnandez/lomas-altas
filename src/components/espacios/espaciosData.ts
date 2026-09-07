@@ -78,7 +78,7 @@ export const TIPOLOGIAS: readonly Tipologia[] = [
     parrafo:
       "Dos exclusivas residencias en planta baja desarrolladas en doble nivel. Cuentan con 263.8 m² de área interior, terraza techada y un amplio jardín privado sin techar de 46.39 m².",
     descripcionLarga:
-      "La residencia Planta Jardín ofrece la experiencia y amplitud de una residencia unifamiliar con la seguridad y comodidades de una torre boutique. Su diseño en doble nivel separa con maestría el área social de la privacidad de las recámaras, abriendo toda la estancia hacia una terraza techada y un jardín privado de 46 m².",
+      "La residencia Planta Jardín ofrece la experiencia y amplitud de una residencia unifamiliar con la seguridad y comodidades de una torre boutique en Lomas Verdes, Naucalpan. Su diseño en doble nivel separa con maestría el área social de la privacidad de las recámaras, abriendo toda la estancia hacia una terraza techada y un jardín privado de 46 m².",
     puntosClave: [
       "Jardín privado sin techar de 46.39 m² con conexión directa a la estancia.",
       "Distribución en doble nivel (Planta Baja y Mezzanine) que maximiza la privacidad.",
@@ -103,7 +103,7 @@ export const TIPOLOGIAS: readonly Tipologia[] = [
         titulo: "Planta Baja — Área Social y Jardín",
         nivel: "Nivel de acceso y jardín",
         src: "/images/tipologias/ta-nj-pb/planta-pb.jpg",
-        alt: "Planta baja ilustrada de Planta Jardín con jardín privado, terraza y estancia",
+        alt: "Planta baja ilustrada de la residencia Planta Jardín de Lomas Altas, con jardín privado, terraza y estancia",
       },
       {
         id: "pa",
@@ -173,7 +173,7 @@ export const TIPOLOGIAS: readonly Tipologia[] = [
     parrafo:
       "Ocho departamentos que representan el modelo más amplio de los niveles 1 al 4. Cuentan con 150 m² habitables y una generosa terraza techada de 41 m² a lo largo de toda la fachada.",
     descripcionLarga:
-      "La Tipología A es el referente de amplitud en Lomas Altas. Diseñada para familias contemporáneas, destaca por su estancia libre de columnas que conecta de piso a techo con una terraza techada de 41 m², llenando cada rincón de luz natural y ventilación cruzada.",
+      "La Tipología A es el referente de amplitud en Lomas Altas, la torre de Terralago en Lomas Verdes. Diseñada para familias contemporáneas, destaca por su estancia libre de columnas que conecta de piso a techo con una terraza techada de 41 m², llenando cada rincón de luz natural y ventilación cruzada.",
     puntosClave: [
       "150 m² interiores optimizados con distribución inteligente.",
       "Terraza techada corrida de 41 m² con jardineras perimetrales integradas.",
@@ -197,7 +197,7 @@ export const TIPOLOGIAS: readonly Tipologia[] = [
         titulo: "Planta Tipo — Tipología A",
         nivel: "N1 a N4",
         src: "/images/tipologias/ta/planta.jpg",
-        alt: "Planta tipo ilustrada de Tipología A con terraza corrida, 3 recámaras y áreas sociales",
+        alt: "Planta tipo ilustrada de Tipología A de Lomas Altas, Lomas Verdes, con terraza corrida, 3 recámaras y áreas sociales",
       },
     ],
     renders: [
@@ -260,7 +260,7 @@ export const TIPOLOGIAS: readonly Tipologia[] = [
     parrafo:
       "Seis unidades ubicadas en los niveles 1 al 4. Ofrecen 153.34 m² interiores muy equilibrados y una terraza techada de 35.6 m² con excelentes vistas panorámicas.",
     descripcionLarga:
-      "La Tipología B equilibra funcionalidad y confort residencial. Con 153.34 m² interiores, ofrece recámaras de gran holgura, estancia con integración total a la terraza techada y una cocina diseñada para la vida diaria y reuniones.",
+      "La Tipología B equilibra funcionalidad y confort residencial a minutos de Satélite y Atizapán de Zaragoza. Con 153.34 m² interiores, ofrece recámaras de gran holgura, estancia con integración total a la terraza techada y una cocina diseñada para la vida diaria y reuniones.",
     puntosClave: [
       "153.34 m² de construcción interior confortable y funcional.",
       "Terraza techada de 35.60 m² con vistas abiertas.",
@@ -284,7 +284,7 @@ export const TIPOLOGIAS: readonly Tipologia[] = [
         titulo: "Planta Tipo — Tipología B",
         nivel: "N1 a N4",
         src: "/images/tipologias/tb/planta.jpg",
-        alt: "Planta tipo ilustrada de Tipología B con 3 recámaras y terraza frontal",
+        alt: "Planta tipo ilustrada de Tipología B de Lomas Altas, Naucalpan, con 3 recámaras y terraza frontal",
       },
     ],
     renders: [
@@ -348,7 +348,7 @@ export const TIPOLOGIAS: readonly Tipologia[] = [
     parrafo:
       "Dos majestuosos penthouses en los niveles 5 y 6. Cuentan con 231.94 m² interiores, una imponente terraza techada de 82 m² y un patio privado sin techar de 70.9 m² en la cumbre del edificio.",
     descripcionLarga:
-      "El Penthouse de Lomas Altas es la máxima expresión de lujo, privacidad y arquitectura residencial. Sus 384 m² totales distribuidos en dos niveles integran una monumental terraza de 82 m² con vistas panorámicas a toda la cañada, además de un patio privado de 70.9 m² ideal para roof garden exclusivo.",
+      "El Penthouse de Lomas Altas es la máxima expresión de lujo, privacidad y arquitectura residencial en Lomas Verdes, Naucalpan. Sus 384 m² totales distribuidos en dos niveles integran una monumental terraza de 82 m² con vistas panorámicas a toda la cañada, además de un patio privado de 70.9 m² ideal para roof garden exclusivo.",
     puntosClave: [
       "384.84 m² totales con doble nivel en los pisos 5 y 6 de la torre.",
       "Terraza techada monumental de 82.00 m² con vistas panorámicas.",
@@ -373,7 +373,7 @@ export const TIPOLOGIAS: readonly Tipologia[] = [
         titulo: "Planta Nivel 5 — Acceso y Área Social",
         nivel: "Nivel 5 (Planta Baja del PH)",
         src: "/images/tipologias/ta-ph-pb/planta-pb.jpg",
-        alt: "Planta ilustrada Nivel 5 de Penthouse con amplia estancia y terraza techada",
+        alt: "Planta ilustrada Nivel 5 del Penthouse de Lomas Altas, Lomas Verdes, con amplia estancia y terraza techada",
       },
       {
         id: "pa",
@@ -670,7 +670,7 @@ export interface FichaFila {
 }
 
 export const FICHA: readonly FichaFila[] = [
-  { dt: "Ubicación", dd: "Lomas Verdes, Naucalpan, Edo. Méx." },
+  { dt: "Ubicación", dd: "Terralago, Lomas Verdes, Naucalpan, Edo. Méx." },
   { dt: "Unidades", dd: "18 exclusivas (16 departamentos + 2 penthouses)" },
   { dt: "Tipologías", dd: "4 modelos diseñados a detalle" },
   { dt: "Niveles", dd: "5 sobre planta baja + 3 de estacionamiento" },

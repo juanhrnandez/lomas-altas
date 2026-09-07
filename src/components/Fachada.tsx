@@ -17,7 +17,7 @@ export default function Fachada() {
       <div className="w-full overflow-hidden">
         <Image
           src="/images/Generales/Terralago Fachada frontal.jpg"
-          alt="Fachada principal del edificio Lomas Altas"
+          alt="Fachada principal de la torre Lomas Altas en Terralago, Lomas Verdes, Naucalpan"
           width={4719}
           height={3675}
           className="w-full h-auto block object-cover"

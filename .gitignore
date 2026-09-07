@@ -17,6 +17,9 @@
 /.next/
 /out/
 
+# static export (npm run build)
+/dist/
+
 # production
 /build
 

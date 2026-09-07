@@ -14,7 +14,7 @@ export default function Footer() {
             <Link href="/" className="inline-block">
               <Image
                 src="/images/loma-logo-clean.png"
-                alt="Lomas Altas"
+                alt="Lomas Altas — Departamentos en Lomas Verdes, Naucalpan"
                 width={280}
                 height={75}
                 unoptimized
@@ -23,9 +23,9 @@ export default function Footer() {
               />
             </Link>
             <p className="text-white text-xs md:text-sm font-light leading-relaxed max-w-xs mx-auto md:mx-0">
-              Un desarrollo residencial boutique dentro de Terralago, diseñado para
-              vivir con amplitud, privacidad y conexión natural en una de las zonas con
-              mayor valor de Lomas Verdes.
+              Un desarrollo residencial boutique dentro de Terralago, en Lomas Verdes,
+              Naucalpan: departamentos y penthouses a minutos de Satélite, Lomas de
+              Satélite, Atizapán de Zaragoza, Presa Madín, Lago Esmeralda y Zona Esmeralda.
             </p>
           </div>
 
@@ -57,9 +57,9 @@ export default function Footer() {
                     d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
                   />
                 </svg>
-                <span className="leading-relaxed max-w-xs">
-                  Avenida Lomas Verdes, P.º de Lomas Verdes, 53125 Naucalpan de Juárez, Estado de México.
-                </span>
+                <address className="not-italic leading-relaxed max-w-xs">
+                  Avenida Lomas Verdes esq. Paseo de Lomas Verdes, Col. Lomas Verdes, 53125 Naucalpan de Juárez, Estado de México.
+                </address>
               </div>
 
               {/* Phone */}
@@ -77,7 +77,7 @@ export default function Footer() {
                     d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.824-1.802-5.14-4.117-6.942-6.942l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
                   />
                 </svg>
-                <a href="tel:5610706351" className="hover:text-[#bab082] transition-colors">
+                <a href="tel:+525610706351" className="hover:text-[#bab082] transition-colors">
                   56 1070 6351
                 </a>
               </div>
@@ -141,16 +141,16 @@ export default function Footer() {
           
           {/* Rights reserved */}
           <span className="order-2 md:order-1 font-light">
-            ® Todos los derechos reservados · 2024
+            © {new Date().getFullYear()} Lomas Altas · Todos los derechos reservados
           </span>
 
-          {/* Privacy and Legal */}
+          {/* Privacy and Legal: both live in the closing block of /contacto. */}
           <div className="order-1 md:order-2 flex items-center gap-4 font-light">
-            <Link href="/contacto" className="hover:text-[#bab082] transition-colors">
+            <Link href="/contacto#aviso-de-privacidad" className="hover:text-[#bab082] transition-colors">
               Aviso de Privacidad
             </Link>
             <span className="text-white/40">•</span>
-            <Link href="/contacto" className="hover:text-[#bab082] transition-colors">
+            <Link href="/contacto#aviso-de-privacidad" className="hover:text-[#bab082] transition-colors">
               Legal
             </Link>
           </div>
@@ -162,7 +162,7 @@ export default function Footer() {
             </span>
             <Image
               src="/images/logoSiermend.svg"
-              alt="Siermend"
+              alt="Siermend, desarrolladora de Lomas Altas"
               width={110}
               height={24}
               unoptimized

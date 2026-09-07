@@ -5,7 +5,7 @@ import LaminaFigure from "./LaminaFigure";
 
 /** Technical sheet printed under the H1. The last three rows fold into a <details> on phones. */
 const FICHA: ReadonlyArray<readonly [string, string]> = [
-  ["Ubicación", "Lomas Verdes, Naucalpan, Estado de México"],
+  ["Ubicación", "Av. Lomas Verdes, Naucalpan, Estado de México"],
   ["Conjunto", "Terralago"],
   ["Programa", "16 departamentos y 2 penthouses"],
   ["Niveles", "5 habitables sobre planta baja"],
@@ -61,7 +61,7 @@ export default function GaleriaPortada() {
 
             <p className="animate-fade-in-up animation-delay-200 mt-7 max-w-sm font-sans text-sm font-light leading-relaxed text-white/75">
               Lomas Altas ocupa cinco niveles sobre el borde arbolado de Terralago, en Lomas
-              Verdes. Estas páginas reúnen el material del proyecto en el orden en que se entiende
+              Verdes, Naucalpan, a minutos de Satélite y Atizapán. Estas páginas reúnen el material del proyecto en el orden en que se entiende
               un edificio: primero por fuera, después lo que se comparte, luego puertas adentro y
               al final los dibujos que lo explican.
             </p>

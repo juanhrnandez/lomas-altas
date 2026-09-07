@@ -215,7 +215,7 @@ export default function Estructura() {
         </div>
 
         <p className="text-center text-xs sm:text-sm md:text-base font-light text-[#5c4a2c]/85 max-w-2xl mx-auto mb-8 sm:mb-12 leading-relaxed">
-          Explora la distribución vertical de la torre. Pasa el cursor o presiona sobre cada nivel para descubrir los detalles de departamentos, penthouses dúplex, residencias planta jardín en 2 niveles, estacionamientos y amenidades.
+          Explora la distribución vertical de la torre Lomas Altas en Terralago. Pasa el cursor o presiona sobre cada nivel para descubrir los detalles de departamentos, penthouses dúplex, residencias planta jardín en 2 niveles, estacionamientos y amenidades.
         </p>
 
         {/* Filter Pills */}
@@ -390,7 +390,7 @@ export default function Estructura() {
                   {/* Base Building Image */}
                   <Image
                     src="/images/distribucion-plantas.jpg"
-                    alt="Distribución por plantas y niveles del edificio residencial Lomas Altas"
+                    alt="Corte por niveles de la torre Lomas Altas en Lomas Verdes, Naucalpan: penthouses dúplex, departamentos, Planta Jardín, estacionamientos y amenidades"
                     fill
                     priority
                     quality={100}

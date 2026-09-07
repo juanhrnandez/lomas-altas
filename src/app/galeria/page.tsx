@@ -8,26 +8,43 @@ import GaleriaColofon from "@/components/galeria/GaleriaColofon";
 import GaleriaPortada from "@/components/galeria/GaleriaPortada";
 import GaleriaSumario from "@/components/galeria/GaleriaSumario";
 import VisorProvider from "@/components/galeria/VisorProvider";
+import JsonLd from "@/components/JsonLd";
+import { OG_BASE, breadcrumbList, galeriaImageGallery } from "@/lib/seo";
 
-// metadataBase, icons, twitter and keywords already live in src/app/layout.tsx.
+// metadataBase, icons, twitter defaults and keywords already live in src/app/layout.tsx.
 export const metadata: Metadata = {
-  title: "Galería — Lomas Altas",
+  title: "Galería de renders — Torre en Terralago, Lomas Verdes",
   description:
-    "Doce láminas del proyecto: exteriores, áreas comunes, interiores de 105 m² y los planos de una torre de 18 unidades en Lomas Verdes, Naucalpan.",
+    "Doce láminas de Lomas Altas: exteriores, áreas comunes, interiores y planos de la torre en Terralago, Lomas Verdes, Naucalpan, a minutos de Satélite y Atizapán.",
+  keywords: [
+    "renders Lomas Altas",
+    "galería departamentos Lomas Verdes",
+    "Terralago Naucalpan",
+    "fachada Lomas Altas",
+    "planos departamentos Naucalpan",
+  ],
   alternates: { canonical: "/galeria" },
   openGraph: {
-    title: "Galería — Lomas Altas",
+    ...OG_BASE,
+    title: "Galería — Lomas Altas, Lomas Verdes",
     description:
-      "Doce láminas del proyecto: exteriores, áreas comunes, interiores y planos de una torre de 18 unidades dentro de Terralago, Lomas Verdes.",
-    type: "article",
+      "Doce láminas del proyecto: exteriores, áreas comunes, interiores y planos de una torre de 18 unidades dentro de Terralago, Lomas Verdes, Naucalpan.",
+    url: "/galeria",
     images: [
       {
         url: "/images/Amenidades/Terralago Vista aérea.jpg",
         width: 4903,
         height: 3263,
-        alt: "Vista aérea del conjunto Lomas Altas dentro de Terralago",
+        alt: "Vista aérea del conjunto Lomas Altas dentro de Terralago, Lomas Verdes, Naucalpan",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Galería — Lomas Altas, Lomas Verdes",
+    description:
+      "Renders de exteriores, áreas comunes, interiores y planos de Lomas Altas en Terralago, Naucalpan.",
+    images: ["/images/Amenidades/Terralago Vista aérea.jpg"],
   },
 };
 
@@ -42,6 +59,15 @@ export const metadata: Metadata = {
 export default function GaleriaPage() {
   return (
     <main className="relative flex-1 bg-cream">
+      <JsonLd
+        data={[
+          galeriaImageGallery(),
+          breadcrumbList([
+            { nombre: "Inicio", path: "/" },
+            { nombre: "Galería", path: "/galeria" },
+          ]),
+        ]}
+      />
       <VisorProvider>
         {/* First focusable element on the page: a skip link placed after the cover and the
             index would only be reachable once the keyboard user has already tabbed through

@@ -6,7 +6,7 @@ export default function Hero() {
       {/* Background Image - Official Hero Render with Original Green Tint */}
       <Image
         src="/images/Amenidades/Terralago Vista aérea.jpg"
-        alt="Lomas Altas - Vista aérea del edificio residencial"
+        alt="Vista aérea de Lomas Altas, torre residencial dentro del conjunto Terralago en Lomas Verdes, Naucalpan"
         fill
         className="object-cover object-top"
         priority

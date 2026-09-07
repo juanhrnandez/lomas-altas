@@ -9,32 +9,42 @@ import PlantaTipo from "@/components/espacios/PlantaTipo";
 import PliegoInterior from "@/components/espacios/PliegoInterior";
 import Portada from "@/components/espacios/Portada";
 import Tipologias from "@/components/espacios/Tipologias";
+import JsonLd from "@/components/JsonLd";
+import { OG_BASE, breadcrumbList, espaciosCollection } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Espacios y distribuciones — Lomas Altas",
+  title: "Departamentos y penthouses en Lomas Verdes, Naucalpan",
   description:
-    "Cuatro tipologías residenciales desde 188.94 m² hasta 384.84 m² en una torre de 18 unidades y 5 niveles en Lomas Verdes, Naucalpan. Fichas de prototipos, renders hiperrealistas y corte del edificio nivel por nivel.",
+    "Cuatro tipologías de 188.94 a 384.84 m² en Lomas Altas, torre de 18 unidades en Terralago, Lomas Verdes, Naucalpan. Plantas, renders, acabados y corte por niveles.",
+  keywords: [
+    "departamentos en Lomas Verdes",
+    "penthouses en Lomas Verdes",
+    "departamentos nuevos Naucalpan",
+    "tipologías Lomas Altas",
+    "Terralago",
+    "Planta Jardín",
+  ],
   alternates: { canonical: "/espacios" },
   openGraph: {
-    title: "Espacios y distribuciones — Lomas Altas",
+    ...OG_BASE,
+    title: "Espacios y distribuciones — Lomas Altas, Lomas Verdes",
     description:
-      "Cuatro tipologías residenciales diseñadas a medida: Planta Jardín, Tipología A, Tipología B y Penthouses. Recorre la distribución, acabados y renders.",
+      "Cuatro tipologías diseñadas a medida en Lomas Verdes, Naucalpan: Planta Jardín, Tipología A, Tipología B y Penthouses. Recorre la distribución, acabados y renders.",
     url: "/espacios",
-    type: "website",
     images: [
       {
         url: "/images/Amenidades/Terralago Vista aérea.jpg",
         width: 4903,
         height: 3263,
-        alt: "Vista aérea del conjunto Terralago con la torre Lomas Altas al centro",
+        alt: "Vista aérea del conjunto Terralago con la torre Lomas Altas al centro, Lomas Verdes, Naucalpan",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Espacios y distribuciones — Lomas Altas",
+    title: "Espacios y distribuciones — Lomas Altas, Lomas Verdes",
     description:
-      "Cuatro tipologías residenciales desde 188.94 m² hasta 384.84 m², plantas interactivas y renders dedicados.",
+      "Cuatro tipologías desde 188.94 m² hasta 384.84 m² en Lomas Verdes, Naucalpan, con plantas interactivas y renders dedicados.",
     images: ["/images/Amenidades/Terralago Vista aérea.jpg"],
   },
 };
@@ -51,6 +61,15 @@ export const metadata: Metadata = {
 export default function EspaciosPage() {
   return (
     <main className="flex-1 bg-cream pb-20 md:pb-0">
+      <JsonLd
+        data={[
+          espaciosCollection(),
+          breadcrumbList([
+            { nombre: "Inicio", path: "/" },
+            { nombre: "Espacios", path: "/espacios" },
+          ]),
+        ]}
+      />
       <Portada />
       <IndiceEspacios />
       <Tipologias />

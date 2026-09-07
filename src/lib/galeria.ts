@@ -50,7 +50,7 @@ export const LAMINAS: Lamina[] = [
     titulo: "Conjunto en contexto",
     epigrafe:
       "Vista aérea del conjunto: la torre de jardineras al centro, las dos barras vecinas de Terralago y la calle arbolada al frente.",
-    alt: "Vista aérea del conjunto Lomas Altas: la torre con jardineras corridas en la fachada, rodeada de calles arboladas y edificios bajos de Lomas Verdes.",
+    alt: "Vista aérea del conjunto Terralago con la torre Lomas Altas: jardineras corridas en la fachada, rodeada de calles arboladas y edificios bajos de Lomas Verdes, Naucalpan.",
     crop: {
       ratio: "",
       imgClass: "object-cover object-[50%_45%]",
@@ -68,7 +68,7 @@ export const LAMINAS: Lamina[] = [
     titulo: "El volumen desde la esquina",
     epigrafe:
       "Siete franjas horizontales de concreto aparente; entre ellas, la vegetación se descuelga de nivel en nivel. Accesos peatonal y vehicular independientes.",
-    alt: "Perspectiva de esquina de la torre Lomas Altas: siete franjas de concreto con jardineras corridas y vegetación colgante, junto a un edificio vecino más bajo.",
+    alt: "Perspectiva de esquina de la torre Lomas Altas en Terralago, Lomas Verdes: siete franjas de concreto con jardineras corridas y vegetación colgante, junto a un edificio vecino más bajo.",
     crop: {
       ratio: "aspect-[4903/3550]",
       imgClass: "object-cover object-center",
@@ -86,7 +86,7 @@ export const LAMINAS: Lamina[] = [
     titulo: "Alzado principal",
     epigrafe:
       "Planta baja libre, acceso vehicular al oriente y el vacío del roof garden abierto en la coronación.",
-    alt: "Alzado principal de Lomas Altas: cinco niveles de departamentos con jardineras en cada losa, planta baja libre y roof garden abierto en la coronación.",
+    alt: "Alzado principal de Lomas Altas, Naucalpan: cinco niveles de departamentos con jardineras en cada losa, planta baja libre y roof garden abierto en la coronación.",
     crop: {
       ratio: "",
       imgClass: "object-cover object-top",
@@ -122,7 +122,7 @@ export const LAMINAS: Lamina[] = [
     titulo: "Gimnasio",
     epigrafe:
       "En planta baja, con muro de ladrillo aparente y ventanal corrido al jardín interior. Luz natural todo el día.",
-    alt: "Gimnasio equipado con máquinas de fuerza y bicicletas, muro de ladrillo claro y ventanales corridos hacia un jardín tropical.",
+    alt: "Gimnasio de Lomas Altas equipado con máquinas de fuerza y bicicletas, muro de ladrillo claro y ventanales corridos hacia un jardín tropical.",
     crop: {
       ratio: "aspect-[16/10]",
       imgClass: "object-cover object-center",
@@ -139,8 +139,8 @@ export const LAMINAS: Lamina[] = [
     height: 512,
     titulo: "El entorno inmediato",
     epigrafe:
-      "Banquetas arboladas, baja densidad y salidas rápidas a Chamapa–Lechería y Periférico.",
-    alt: "Vista aérea de la calle frente al proyecto: banquetas arboladas, edificios bajos y tráfico ligero en Lomas Verdes.",
+      "Banquetas arboladas, baja densidad y salidas rápidas a Chamapa–Lechería y Periférico; Satélite y Atizapán de Zaragoza a minutos.",
+    alt: "Vista aérea de la Avenida Lomas Verdes frente al proyecto: banquetas arboladas, edificios bajos y tráfico ligero en Lomas Verdes, Naucalpan.",
     crop: {
       ratio: "",
       imgClass: "object-cover object-bottom",
@@ -229,7 +229,7 @@ export const LAMINAS: Lamina[] = [
     titulo: "Planta tipo — Modelo A",
     epigrafe:
       "105 m². Zona social continua al frente y ala privada de recámaras al fondo, con terraza corrida sobre la fachada.",
-    alt: "Plano isométrico de la planta tipo Modelo A: tres recámaras, baños, cocina integral, estancia con comedor y terraza corrida con jardineras al frente.",
+    alt: "Plano isométrico de la planta tipo Modelo A de Lomas Altas, Lomas Verdes: tres recámaras, baños, cocina integral, estancia con comedor y terraza corrida con jardineras al frente.",
     crop: {
       ratio: "aspect-[907/1143]",
       imgClass: "object-contain",
@@ -247,7 +247,7 @@ export const LAMINAS: Lamina[] = [
     titulo: "Corte por niveles",
     epigrafe:
       "Niveles de departamentos, dos penthouses dúplex, residencias Planta Jardín en 2 niveles (N0–N1), tres sótanos de estacionamiento y amenidades.",
-    alt: "Corte esquemático del edificio por niveles: amenidades, tres sótanos de estacionamiento, residencias Planta Jardín en 2 niveles (N0–N1), departamentos y penthouses dúplex.",
+    alt: "Corte esquemático de la torre Lomas Altas, Naucalpan, por niveles: amenidades, tres sótanos de estacionamiento, residencias Planta Jardín en 2 niveles (N0–N1), departamentos y penthouses dúplex.",
     crop: {
       ratio: "aspect-[1107/961]",
       imgClass: "object-contain",

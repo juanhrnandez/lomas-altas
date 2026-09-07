@@ -43,8 +43,8 @@ export default function PorticoContacto() {
 
             <p className="relative mt-6 max-w-[46ch] font-sans text-sm font-light leading-relaxed text-white/75 md:text-base">
               Son dieciocho unidades y cada nivel se vive distinto. Agenda tu visita a la sala de
-              ventas o escríbenos: te contestamos el mismo día hábil, sin insistencia y sin
-              compromiso.
+              ventas en Lomas Verdes, Naucalpan, o escríbenos: te contestamos el mismo día hábil,
+              sin insistencia y sin compromiso.
             </p>
           </SafeReveal>
 

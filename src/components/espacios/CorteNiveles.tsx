@@ -50,7 +50,7 @@ export default function CorteNiveles() {
               titulo="El edificio"
               acento="en corte"
               tone="blanco"
-              bajada="Distribución vertical de la torre: penthouses dúplex en la cumbre, niveles de departamentos tipo, residencias Planta Jardín en 2 niveles con jardín privado de 46 m², tres sótanos de estacionamiento y amenidades en el nivel más bajo."
+              bajada="Distribución vertical de la torre Lomas Altas en Terralago: penthouses dúplex en la cumbre, niveles de departamentos tipo, residencias Planta Jardín en 2 niveles con jardín privado de 46 m², tres sótanos de estacionamiento y amenidades en el nivel más bajo."
             />
           </SafeReveal>
 

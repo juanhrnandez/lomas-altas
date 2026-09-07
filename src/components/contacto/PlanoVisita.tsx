@@ -71,7 +71,7 @@ export default function PlanoVisita() {
 
           <p className="mt-6 font-sans text-xs font-light leading-relaxed text-[#4a3e26]/85">
             Pregunta por el acceso de visitantes cuando agendes: la sala de ventas está dentro del
-            desarrollo. El recorrido toma unos 40 minutos.
+            desarrollo, en Terralago, Naucalpan. El recorrido toma unos 40 minutos.
           </p>
 
           <a

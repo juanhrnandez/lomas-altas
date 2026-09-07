@@ -24,7 +24,7 @@ export default function Contacto() {
           <div className="absolute inset-0 z-0 bg-[#193628]">
             <Image
               src="/images/home.jpg"
-              alt="Lomas Altas Arquitectura"
+              alt="Boceto arquitectónico de la torre Lomas Altas"
               fill
               unoptimized
               quality={100}
@@ -41,12 +41,12 @@ export default function Contacto() {
 
               <ul className="flex flex-col gap-5">
                 {[
-                  "Ubicación estratégica",
-                  "Baja densidad",
+                  "Ubicación estratégica en Naucalpan",
+                  "Baja densidad: 18 unidades",
                   "Departamentos amplios",
                   "Terrazas privadas",
                   "Amenidades funcionales",
-                  "Plusvalía en Lomas Verdes",
+                  "Plusvalía en Lomas Verdes y Satélite",
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-4 text-white/95 text-base md:text-lg">
                     <Check className="h-5 w-5 text-gold-light shrink-0" />
@@ -66,7 +66,7 @@ export default function Contacto() {
                 Agenda una cita y conoce el proyecto
               </h3>
               <p className="text-white/70 text-sm font-sans font-light mb-10">
-                Déjanos tus datos y te contactamos.
+                Déjanos tus datos y te contactamos para tu visita a la sala de ventas en Lomas Verdes.
               </p>
 
               <form onSubmit={handleSubmit} className="flex flex-col gap-7">

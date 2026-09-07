@@ -8,20 +8,16 @@ import {
   ArrowRight,
   Maximize2,
   CheckCircle2,
-  Car,
   Bed,
   Bath,
   Utensils,
   Sofa,
-  Layers,
-  Sparkles,
   MessageCircle,
-  Mail,
 } from "lucide-react";
 import SafeReveal from "@/components/ui/SafeReveal";
 import Lightbox, { type LightboxItem } from "@/components/ui/Lightbox";
 import type { Tipologia } from "./espaciosData";
-import { TIPOLOGIAS, CONTACTO } from "./espaciosData";
+import { TIPOLOGIAS } from "./espaciosData";
 
 interface TipologiaDetalleProps {
   tipologia: Tipologia;
@@ -74,13 +70,27 @@ export default function TipologiaDetalle({ tipologia }: TipologiaDetalleProps) {
       <section className="border-b border-[#5c4a2c]/15 bg-[#153124] pt-28 pb-12 text-white md:pt-36 md:pb-16">
         <div className="mx-auto w-full max-w-[1440px] px-6 md:px-10 lg:px-16">
           <div className="flex flex-col gap-6">
-            <Link
-              href="/espacios#tipologias"
-              className="inline-flex items-center gap-2 font-sans text-xs font-medium uppercase tracking-[0.2em] text-gold-light transition-colors hover:text-white"
+            {/* Visible breadcrumb; mirrors the BreadcrumbList JSON-LD of the route. */}
+            <nav
+              aria-label="Migas de pan"
+              className="flex flex-wrap items-center gap-x-3 gap-y-1 font-sans text-[11px] font-medium uppercase tracking-[0.2em]"
             >
-              <ArrowLeft className="h-4 w-4" />
-              Volver al catálogo de tipologías
-            </Link>
+              <Link href="/" className="text-white/60 transition-colors hover:text-white">
+                Inicio
+              </Link>
+              <span aria-hidden className="text-gold/60">/</span>
+              <Link
+                href="/espacios#tipologias"
+                className="inline-flex items-center gap-2 text-gold-light transition-colors hover:text-white"
+              >
+                <ArrowLeft className="h-3.5 w-3.5" />
+                Espacios y tipologías
+              </Link>
+              <span aria-hidden className="text-gold/60">/</span>
+              <span aria-current="page" className="text-white">
+                {tipologia.nombre}
+              </span>
+            </nav>
 
             <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
               <div className="max-w-3xl">
@@ -92,7 +102,7 @@ export default function TipologiaDetalle({ tipologia }: TipologiaDetalleProps) {
                     {tipologia.codigo}
                   </span>
                   <span className="font-sans text-xs font-light tracking-widest uppercase text-gold-light">
-                    {tipologia.unidades} unidades en torre · {tipologia.niveles}
+                    {tipologia.unidades} unidades en torre · {tipologia.niveles} · Lomas Verdes, Naucalpan
                   </span>
                 </div>
 
@@ -454,7 +464,7 @@ export default function TipologiaDetalle({ tipologia }: TipologiaDetalleProps) {
                 ¿Deseas conocer más sobre la {tipologia.nombre}?
               </h3>
               <p className="mt-4 font-sans text-sm font-light leading-relaxed text-white/80 sm:text-base">
-                Nuestros asesores patrimoniales pueden compartirte la lista de precios vigente, esquemas de pago y coordinar una visita a la sala de ventas.
+                Nuestros asesores patrimoniales pueden compartirte la lista de precios vigente, esquemas de pago y coordinar una visita a la sala de ventas de Lomas Altas en Terralago, Lomas Verdes, Naucalpan.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-4">

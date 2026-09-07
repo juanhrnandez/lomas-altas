@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Lomas Altas
 
-## Getting Started
+Sitio de [Next.js](https://nextjs.org) para la torre residencial Lomas Altas (Terralago, Lomas Verdes, Naucalpan). Se publica como **sitio estático**: el build genera una carpeta `dist/` lista para subir a cualquier servidor HTML.
 
-First, run the development server:
+## Desarrollo
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build estático (dist)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+El dominio final tiene que ir en `NEXT_PUBLIC_SITE_URL` **antes** de construir: se hornea en el canonical, el `sitemap.xml`, el `robots.txt` y los datos estructurados (JSON-LD). Sin él, esas URLs salen apuntando a `localhost`.
 
-## Learn More
+```bash
+NEXT_PUBLIC_SITE_URL=https://www.tudominio.com npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+O deja el valor en un archivo `.env.production` (está en `.gitignore`):
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+NEXT_PUBLIC_SITE_URL=https://www.tudominio.com
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+y ejecuta `npm run build`. El resultado queda en `dist/`:
 
-## Deploy on Vercel
+```
+dist/
+├── index.html
+├── 404.html
+├── espacios/index.html
+├── espacios/ta/index.html          (y ta-nj-pb, tb, ta-ph-pb)
+├── galeria/index.html
+├── contacto/index.html
+├── sitemap.xml · robots.txt · manifest.webmanifest
+├── images/ · icon.svg · opengraph-image.jpg …
+└── _next/static/                   (JS, CSS y fuentes autoalojadas)
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Para probarlo en local antes de subirlo:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run preview
+```
+
+### Subirlo al servidor
+
+Copia **todo el contenido** de `dist/` a la raíz pública del servidor (`public_html`, `htdocs`, `/var/www/...`). Cada ruta es una carpeta con su `index.html`, así que `/espacios/` funciona en Nginx, Apache, S3, GitHub Pages o cualquier hosting estático sin reglas de reescritura. Recomendado, no obligatorio:
+
+- Servir `404.html` como página de error 404.
+- Redirigir `/espacios` → `/espacios/` (la mayoría de servidores ya lo hacen para carpetas).
+- Cachear `_next/static/` con `Cache-Control: max-age=31536000, immutable` (los nombres llevan hash).
+
+Después de publicar: enviar `https://tudominio/sitemap.xml` en Google Search Console y validar las páginas en el [Rich Results Test](https://search.google.com/test/rich-results).
+
+## SEO
+
+Toda la capa SEO vive en `src/lib/seo.ts` (keywords objetivo, datos de la sala de ventas, constructores JSON-LD) y `src/lib/zonas.ts` (zonas cercanas que se muestran en la página). `robots.txt`, `sitemap.xml` y el manifest se generan desde `src/app/robots.ts`, `sitemap.ts` y `manifest.ts`.

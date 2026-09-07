@@ -29,7 +29,7 @@ const RAZONES = [
     unidad: "minutos a todo",
     titulo: "Lomas Verdes consolidado",
     texto:
-      "Colegio Alemán, Carol Baur, Plaza Satélite y el acceso a Chamapa–Lechería a la mano.",
+      "Colegio Alemán, Carol Baur, Plaza Satélite y el acceso a Chamapa–Lechería a la mano; Atizapán de Zaragoza, Presa Madín y Zona Esmeralda a minutos.",
   },
 ];
 
