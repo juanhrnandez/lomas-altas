@@ -635,7 +635,7 @@ export const FIGURAS: readonly LightboxItem[] = [
     caption: "Sala con cancelería corrediza de piso a techo hacia la terraza ajardinada.",
   },
   {
-    src: "/images/Amenidades/Terralago Gym.jpg",
+    src: "/images/amenidades/terralago-gym.jpg",
     alt: "Gimnasio del edificio en planta baja, con ventanales hacia el jardín",
     title: "Fig. 07 — Gimnasio",
     caption: "Gimnasio del edificio, en planta baja, con ventanales al jardín.",

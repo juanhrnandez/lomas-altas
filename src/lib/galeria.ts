@@ -44,7 +44,7 @@ export const LAMINAS: Lamina[] = [
   {
     id: "01",
     cuaderno: "01",
-    src: "/images/Amenidades/Terralago Vista aérea.jpg",
+    src: "/images/amenidades/terralago-vista-aerea.jpg",
     width: 4903,
     height: 3263,
     titulo: "Conjunto en contexto",
@@ -62,7 +62,7 @@ export const LAMINAS: Lamina[] = [
   {
     id: "02",
     cuaderno: "01",
-    src: "/images/Generales/Terralago Fachada lateral.jpg",
+    src: "/images/generales/terralago-fachada-lateral.jpg",
     width: 4903,
     height: 3550,
     titulo: "El volumen desde la esquina",
@@ -80,7 +80,7 @@ export const LAMINAS: Lamina[] = [
   {
     id: "03",
     cuaderno: "01",
-    src: "/images/Generales/Terralago Fachada frontal.jpg",
+    src: "/images/generales/terralago-fachada-frontal.jpg",
     width: 4719,
     height: 3675,
     titulo: "Alzado principal",
@@ -116,7 +116,7 @@ export const LAMINAS: Lamina[] = [
   {
     id: "05",
     cuaderno: "02",
-    src: "/images/Amenidades/Terralago Gym.jpg",
+    src: "/images/amenidades/terralago-gym.jpg",
     width: 3419,
     height: 2043,
     titulo: "Gimnasio",

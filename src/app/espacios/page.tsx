@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     url: "/espacios",
     images: [
       {
-        url: "/images/Amenidades/Terralago Vista aérea.jpg",
+        url: "/images/amenidades/terralago-vista-aerea.jpg",
         width: 4903,
         height: 3263,
         alt: "Vista aérea del conjunto Terralago con la torre Lomas Altas al centro, Lomas Verdes, Naucalpan",
@@ -44,8 +44,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Espacios y distribuciones — Lomas Altas, Lomas Verdes",
     description:
-      "Cuatro tipologías desde 188.94 m² hasta 384.84 m² en Lomas Verdes, Naucalpan, con plantas interactivas y renders dedicados.",
-    images: ["/images/Amenidades/Terralago Vista aérea.jpg"],
+      "Cuatro tipologías residenciales desde 188.94 m² hasta 384.84 m², plantas interactivas y renders dedicados.",
+    images: ["/images/amenidades/terralago-vista-aerea.jpg"],
   },
 };
 

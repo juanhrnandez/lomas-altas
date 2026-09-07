@@ -58,7 +58,7 @@ export default function CierreContacto() {
         <div className="relative flex items-center justify-center lg:justify-end lg:col-span-6 xl:col-span-6 w-full">
           <div className="relative w-full max-w-xl lg:max-w-none overflow-hidden rounded-sm border border-[#4a3e26]/20 shadow-2xl">
             <Image
-              src="/images/Generales/Terralago Fachada lateral.jpg"
+              src="/images/generales/terralago-fachada-lateral.jpg"
               alt="Edificio Lomas Altas — Fachada lateral"
               width={1400}
               height={1014}

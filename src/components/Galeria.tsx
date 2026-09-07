@@ -5,15 +5,15 @@ import { useState } from "react";
 
 const images = [
   {
-    src: "/images/Amenidades/Terralago Vista aérea.jpg",
+    src: "/images/amenidades/terralago-vista-aerea.jpg",
     alt: "Vista aérea de Lomas Altas",
   },
   {
-    src: "/images/Generales/Terralago Fachada lateral.jpg",
+    src: "/images/generales/terralago-fachada-lateral.jpg",
     alt: "Fachada lateral del edificio Lomas Altas",
   },
   {
-    src: "/images/Generales/Terralago Fachada frontal.jpg",
+    src: "/images/generales/terralago-fachada-frontal.jpg",
     alt: "Vista frontal de Lomas Altas",
   },
 ];

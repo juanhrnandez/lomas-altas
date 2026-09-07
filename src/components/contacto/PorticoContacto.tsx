@@ -81,7 +81,7 @@ export default function PorticoContacto() {
         <div className="relative min-h-[320px] sm:min-h-[420px] lg:col-span-5 lg:min-h-0">
           <SafeReveal variant="fade-in" delay={200} className="absolute inset-0">
             <Image
-              src="/images/Amenidades/Terralago Vista aérea.jpg"
+              src="/images/amenidades/terralago-vista-aerea.jpg"
               alt="Vista aérea del conjunto Terralago con la torre Lomas Altas al atardecer"
               fill
               priority

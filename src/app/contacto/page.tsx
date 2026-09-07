@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     url: "/contacto",
     images: [
       {
-        url: "/images/Amenidades/Terralago Vista aérea.jpg",
+        url: "/images/amenidades/terralago-vista-aerea.jpg",
         width: 4903,
         height: 3263,
         alt: "Vista aérea del conjunto Terralago con la torre Lomas Altas, Lomas Verdes, Naucalpan",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     title: "Contacto — Lomas Altas, Lomas Verdes",
     description:
       "Agenda tu visita a la sala de ventas de Lomas Altas en Lomas Verdes, Naucalpan.",
-    images: ["/images/Amenidades/Terralago Vista aérea.jpg"],
+    images: ["/images/amenidades/terralago-vista-aerea.jpg"],
   },
 };
 

@@ -156,8 +156,8 @@ export default function ElDesarrollo() {
 
             <div className="relative z-10 w-full h-full min-h-[380px] sm:min-h-[460px] lg:min-h-[550px] overflow-hidden">
               <Image
-                src="/images/Generales/Terralago Fachada lateral.jpg"
-                alt="Fachada lateral de la torre Lomas Altas en Terralago, con jardineras corridas en cada nivel, Lomas Verdes, Naucalpan"
+                src="/images/generales/terralago-fachada-lateral.jpg"
+                alt="Edificio Lomas Altas - Terralago Fachada lateral"
                 fill
                 className="object-cover object-center w-full h-full"
                 priority
