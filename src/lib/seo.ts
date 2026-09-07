@@ -96,7 +96,7 @@ export const SALA_DE_VENTAS = {
 } as const;
 
 const LOGO_URL = absoluteUrl("/images/loma-logo-clean.png");
-const HERO_IMAGE_URL = absoluteUrl("/images/Amenidades/Terralago Vista aérea.jpg");
+const HERO_IMAGE_URL = absoluteUrl("/images/amenidades/terralago-vista-aerea.jpg");
 const OG_IMAGE_URL = absoluteUrl("/opengraph-image.jpg");
 
 const ORG_ID = `${SITE_URL}/#siermend`;

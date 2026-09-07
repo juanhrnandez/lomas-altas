@@ -14,7 +14,7 @@ export const dynamic = "force-static";
 export default function sitemap(): MetadataRoute.Sitemap {
   const ahora = new Date();
 
-  const hero = absoluteUrl("/images/Amenidades/Terralago Vista aérea.jpg");
+  const hero = absoluteUrl("/images/amenidades/terralago-vista-aerea.jpg");
 
   const home: MetadataRoute.Sitemap[number] = {
     url: absoluteUrl("/"),
@@ -23,11 +23,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 1,
     images: [
       hero,
-      absoluteUrl("/images/Generales/Terralago Fachada lateral.jpg"),
-      absoluteUrl("/images/Generales/Terralago Fachada frontal.jpg"),
-      absoluteUrl("/images/Amenidades/Terralago Gym.jpg"),
-      absoluteUrl("/images/Amenidades/TT_Lobby_06@2x.jpg"),
-      absoluteUrl("/images/Amenidades/Terralago Salón.jpg"),
+      absoluteUrl("/images/generales/terralago-fachada-lateral.jpg"),
+      absoluteUrl("/images/generales/terralago-fachada-frontal.jpg"),
+      absoluteUrl("/images/amenidades/terralago-gym.jpg"),
+      absoluteUrl("/images/amenidades/tt-lobby-06-2x.jpg"),
+      absoluteUrl("/images/amenidades/terralago-salon.jpg"),
       absoluteUrl("/images/distribucion-plantas.jpg"),
     ],
   };

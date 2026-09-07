@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     title: "Galería — Lomas Altas, Lomas Verdes",
     description:
       "Renders de exteriores, áreas comunes, interiores y planos de Lomas Altas en Terralago, Naucalpan.",
-    images: ["/images/Amenidades/Terralago Vista aérea.jpg"],
+    images: ["/images/amenidades/terralago-vista-aerea.jpg"],
   },
 };
 
